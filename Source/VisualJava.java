@@ -10,7 +10,7 @@ public class VisualJava{
 	
 	public VisualJava() {
 		toolkit = new ViewToolkit(); //Toolkit view for the sketch
-		programView = new ViewProgram(); //Main view for the sketch
+		//programView = new ViewProgram(); //Main view for the sketch
 	}
 	
 	public static void main(String[] args) throws InterruptedException {
