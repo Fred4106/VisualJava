@@ -15,7 +15,7 @@ public class ViewToolkit extends PApplet{
 	final int[] BGCOLOR = new int[] {120, 120, 120};
 	final int[] LINECOLOR = new int[] {0, 0, 0};
 
-	RadioButtonToggle b = new RadioButtonToggle(0, 0, 48, 98, "IfElse", new IconIfElse());
+	RadioButtonToggle b = new RadioButtonToggle(0, 0, 48, 98, "IFELSE", "If/Else", new IconIfElse());
 	
 	public ViewToolkit() {
 		this.runSketch();
@@ -30,6 +30,8 @@ public class ViewToolkit extends PApplet{
 	
 	public void draw() {
 		noStroke();
+		rectMode(PApplet.CORNER);
+		pushMatrix();
 		background(BGCOLOR[0], BGCOLOR[1], BGCOLOR[2]);
 		fill(LINECOLOR[0], LINECOLOR[1], LINECOLOR[2]);
 		for(int a = 50; a < XSIZE; a+=50) {
@@ -38,6 +40,7 @@ public class ViewToolkit extends PApplet{
 		for(int b = 100; b < YSIZE; b+=100) {
 			rect(0, b-2, XSIZE, 4);
 		}
+		popMatrix();
 		b.draw(this);
 	}
 	

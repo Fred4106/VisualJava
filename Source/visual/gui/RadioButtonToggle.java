@@ -13,15 +13,17 @@ public class RadioButtonToggle {
 	private int ySize = 0;
 	
 	private String buttonName = "ERROR";
+	private String buttonDisplay = "ERROR";
 	
 	private int[] colors = new int[]{125, 125, 255};
 	
-	public RadioButtonToggle(int x, int y, int xS, int yS, String bn, IconAbstract i) {
+	public RadioButtonToggle(int x, int y, int xS, int yS, String bn, String bd, IconAbstract i) {
 		this.xLoc = x;
 		this.yLoc = y;
 		this.xSize = xS;
 		this.ySize = yS;
 		this.buttonName = bn;
+		this.buttonDisplay = bd;
 		this.icon = i;
 	}
 	
@@ -31,6 +33,10 @@ public class RadioButtonToggle {
 		p.noStroke();
 		p.fill(colors[0], colors[1], colors[2]);
 		p.rect(xLoc, yLoc, xSize, ySize);
+		p.translate(xLoc+(xSize/2), yLoc+(ySize/2));
+		p.textAlign(PApplet.CENTER, PApplet.CENTER);
+		p.fill(0);
+		p.text(buttonDisplay, 0, 0);  // STEP 6 Display Text
 		p.popMatrix();
 		icon.draw(xLoc+(xSize/2), yLoc+(xSize/2), xSize/3, xSize/3, p);
 	}
