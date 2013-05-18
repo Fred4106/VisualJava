@@ -12,9 +12,9 @@ public class VisualJava{
 	
 	public VisualJava() {
 		toolkit = new ViewToolkit(); //Toolkit view for the sketch
-		//programView = new ViewProgram(); //Main view for the sketch
+		programView = new ViewProgram(); //Main view for the sketch
 		
-		font = toolkit.createFont("Arial", 12);
+		//font = toolkit.createFont("Arial", 12);
 	}
 	
 	public static void main(String[] args) throws InterruptedException {

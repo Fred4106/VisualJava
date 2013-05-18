@@ -41,7 +41,7 @@ public class RadioButtonToggle {
 		icon.draw(xLoc+(xSize/2), yLoc+(xSize/2), xSize/3, xSize/3, p);
 	}
 	
-	public boolean wasClicked(int x, int y) {
+	public boolean isOverBtn(int x, int y) {
 		if(x > xLoc && x < xLoc + xSize) {
 			if(y > yLoc && y < yLoc + ySize) {
 				return true;

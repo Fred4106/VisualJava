@@ -10,7 +10,6 @@ public class IconIfElse extends IconAbstract {
 		p.rectMode(PConstants.CENTER);
 		p.rotate(PApplet.radians(45));
 		p.fill(250, 200, 30);
-		p.smooth();
 		p.stroke(0);
 		p.strokeWeight(1);
 		p.rect(0, 0, xSize, ySize);
